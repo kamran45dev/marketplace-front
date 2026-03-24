@@ -1,0 +1,12 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/offers": "pages/offers.js",
+  "/": "pages/index.js",
+  "/product/[id]": "pages/product/[id].js",
+  "/login": "pages/login.js",
+  "/seller/dashboard": "pages/seller/dashboard.js",
+  "/chat": "pages/chat.js",
+  "/profile": "pages/profile.js"
+}

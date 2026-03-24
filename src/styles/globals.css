@@ -1,0 +1,66 @@
+/* styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #0a0a0f;
+  color: #f0f0f5;
+  min-height: 100vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #111118; }
+::-webkit-scrollbar-thumb { background: #c026d3; border-radius: 3px; }
+
+/* Selection */
+::selection { background: #c026d3; color: white; }
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-600 hover:bg-brand-500 text-white font-medium px-6 py-2.5 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply border border-brand-600 text-brand-400 hover:bg-brand-600 hover:text-white font-medium px-6 py-2.5 rounded-lg transition-all duration-200;
+  }
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-500 text-white font-medium px-6 py-2.5 rounded-lg transition-all duration-200;
+  }
+  .card {
+    @apply bg-dark-800 border border-white/5 rounded-xl;
+  }
+  .input {
+    @apply w-full bg-dark-700 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-white/30 focus:outline-none focus:border-brand-500 transition-colors;
+  }
+  .label {
+    @apply block text-sm font-medium text-white/60 mb-1.5;
+  }
+  .badge-active {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-900/50 text-green-400 border border-green-800/50;
+  }
+  .badge-sold {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-900/50 text-blue-400 border border-blue-800/50;
+  }
+  .badge-deleted {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-red-900/50 text-red-400 border border-red-800/50;
+  }
+}
